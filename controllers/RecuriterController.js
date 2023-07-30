@@ -21,7 +21,7 @@ class UserController {
 
 
           const query =
-            "INSERT INTO users (email, username, phoneNumber, password) VALUES (?, ?, ?, ?)";
+            "INSERT INTO recuriter (email, username, phoneNumber, password) VALUES (?, ?, ?, ?)";
           const values = [email, username, phoneNumber, hashpassword];
           connection.query(query, values, (error) => {
             if (error) {
@@ -30,7 +30,7 @@ class UserController {
               });
             } else {
               res.send({
-                message: "User is SignIn",
+                message: "Recuriter is SignIn",
               });
             }
           });
@@ -58,7 +58,7 @@ class UserController {
     try {
       if (email != null && password != null) {
 
-        connection.query('SELECT * FROM users WHERE email = ?', [email], async (err, results) => {
+        connection.query('SELECT * FROM recuriter WHERE email = ?', [email], async (err, results) => {
             if (err) {
               console.error('Error executing the query:', err);
               res.send({

@@ -16,6 +16,8 @@ const connection = mysql.createConnection({
     console.log('database connected ');
   });
 
+  
+
 
 
   module.exports = connection;
