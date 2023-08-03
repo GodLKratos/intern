@@ -243,7 +243,7 @@ class UserResumeController{
                 if (err) {
                   res.send({ message: err.message });
                 } else {
-                  res.send({ message: 'updated' });
+                  res.send({ message: 'updated' }); 
                 }
               });
             }
